@@ -14,8 +14,26 @@
 */
 package com.p0n0marenk0;
 
-public class Main {
+import java.util.ArrayList;
+import java.util.List;
 
+public class PersonUtil {
+    private static final List<Person> listOfPerson = new ArrayList<>();
     public static void main(String[] args) {
+        Person person = new Person("Иван","Иванович","Иванов", 22);
+        listOfPerson.add(person);
+        System.out.println(person.toString());
+        System.out.println(returnFullName());
+        System.out.println(returnFullNameAndNotFull());
+    }
+
+    private static String returnFullName() {
+        return listOfPerson.get(0).getSurname() + " " + listOfPerson.get(0).getName() +
+                " " + listOfPerson.get(0).getSecondName() + " ";
+    }
+
+    private static String returnFullNameAndNotFull() {
+        return listOfPerson.get(0).getSurname() + " " + listOfPerson.get(0).getName().charAt(0) +
+                ". " + listOfPerson.get(0).getSecondName().charAt(0) + ". ";
     }
 }
