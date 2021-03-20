@@ -20,7 +20,7 @@ public class Person {
     private String name;
     private String secondName;
     private String surname;
-    private int age;
+    private String dateOfBirth;
 
     public Person() {
     }
@@ -33,11 +33,11 @@ public class Person {
         this.fullName = fullName;
     }
 
-    public Person(String name, String secondName, String surname, int age) {
+    public Person(String name, String secondName, String surname, String dateOfBirth) {
         this.name = name;
         this.secondName = secondName;
         this.surname = surname;
-        this.age = age;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public Person(String fullName) {
@@ -74,12 +74,12 @@ public class Person {
         this.surname = surname;
     }
 
-    public int getAge() {
-        return age;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
 
@@ -93,7 +93,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", surname='" + surname + '\'' +
-                ", age=" + age +
+                ", age=" + dateOfBirth +
                 '}';
     }
 }
